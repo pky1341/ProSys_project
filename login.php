@@ -79,20 +79,17 @@
     </style>
   </head>
   <body>
-    <form class="form">
-       <p class="form-title">Sign in to your account</p>
+    <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+       <p class="form-title">Login to your account</p>
         <div class="input-container">
-          <input type="email" placeholder="Enter email">
+          <input type="Number" placeholder="Enter Registered Number" name="contact" id="contact">
           <span>
           </span>
       </div>
       <div class="input-container">
-          <input type="password" placeholder="Enter password">
+          <input type="password" placeholder="Enter password" id="passwd" name="passwd">
         </div>
-         <button type="submit" class="submit">
-        Sign in
-      </button>
-
+         <input type="submit" class="submit" value="Login">
       <p class="signup-link">
         No account?
         <a href="register.php">Sign up</a>
@@ -102,3 +99,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<?php
+
+include "database.php";
+if($_SERVER['REQUEST_METHOD']=='POST'){
+  $contact=$_POST['contact'];
+  $passwd=$_POST['passwd'];
+  $sql="SELECT * FROM users WHERE contact='$contact'";
+  $result=$conn->query($sql);
+  if($result->num_rows > 0){
+    echo '<script>window.alert("Login successful.");</script>';
+        session_start();
+        $_SESSION['loggedIn']=true;
+        $_SESSION['contact']=$contact;
+        header('Location:index.php');
+  }
+  else{
+    echo '<script> window.alert("Invalid Credentials!!!");</script>';
+  }
+}
+?>

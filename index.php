@@ -1,7 +1,24 @@
+<?php
+session_start();
+if($_SESSION['loggedIn']==false || !isset($_SESSION['loggedIn'])){
+    header('Location:login.php');
+    exit();
+}
+?>
+
+<?php
+include "database.php";
+
+$sql="SELECT * FROM users WHERE contact='{$_SESSION['contact']}'";
+$result=$conn->query($sql);
+$row=$result->fetch_assoc();
+session_start();
+$_SESSION['name']=$row['name'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>User DashBoard</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -33,14 +50,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><?php echo $_SESSION['name']; ?></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
+        <li class="active"><a href="index.php">Dashboard</a></li>
+        <li><a href="career.php">Career</a></li>
+        <li><a href="health.php">Health</a></li>
+        <li><a href="tution.php">Tution</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="logout.php" onclick="confirmDelete(event)">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -49,12 +68,14 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
+      <h2><?php echo $_SESSION['name']; ?></h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li><a href="career.php">Career</a></li>
+        <li><a href="health.php">Health</a></li>
+        <li><a href="tution.php">Tution</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="logout.php" onclick="confirmDelete(event)">Logout</a></li>
       </ul><br>
     </div>
     <br>
@@ -128,6 +149,30 @@
     </div>
   </div>
 </div>
-
+<script>
+    function confirmDelete(event) {
+        event.preventDefault(); 
+        
+        var confirmation = confirm("Are you sure you want to Logout this Panel?");
+        
+        if (confirmation) {
+            $.ajax({
+                url: event.target.href,
+                method: "DELETE",
+                data: {_token: "{{ csrf_token() }}"}, 
+                success: function(response) {
+                    alert("Logout successfully");
+                    location.reload();
+                },
+                error: function(error) {
+                    alert("Logout successfully");
+                    location.reload();
+                }
+            });
+        } else {
+            alert("Logout canceled");
+        }
+    }
+</script> 
 </body>
 </html>

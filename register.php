@@ -163,7 +163,7 @@
         </label>
 
         <label>
-            <input class="input" type="number"  required="true" name="" id="contact">
+            <input class="input" type="number"  required="true" name="contact" id="contact">
             <span>Contact</span>
         </label>
     </div>  
@@ -199,6 +199,73 @@
 include "database.php";
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-   $name=$_POST
+   $name=$_POST['name'];
+   $contact=$_POST['contact'];
+   $email=$_POST['email'];
+   $addr=$_POST['addr'];
+   $city=$_POST['city'];
+   $passwd1=$_POST['passwd1'];
+   $passwd2=$_POST['passwd2'];
+   $name=trim($name);
+   $addr=trim($addr);
+   $city=trim($city);
+   $sql1="SELECT * FROM users WHERE contact = '$contact'";
+   $sql2 = "SELECT * FROM users WHERE email = '$email'";
+   $result1=$conn->query($sql1);
+   $result2= $conn->query($sql2);
+   if (empty($name) || empty($contact) || empty($email) || empty($addr) || empty($city) || empty($passwd1) || empty($passwd2)) {
+        echo '<script>window.alert("All fields are required.");</script>';
+    } 
+   elseif(!preg_match("/^[a-zA-Z ]+$/",$name))
+   {
+    echo '<script>window.alert("Name should contain only letters and spaces.");</script>';
+   }
+   elseif (strlen($name) < 2 || strlen($name) > 25) {
+        echo '<script>window.alert("Name should be between 2 and 25 characters.");</script>';
+    }
+    elseif (!preg_match("/^[0-9]+$/", $contact)) {
+        echo '<script>window.alert("Invalid characters in the contact number. Only numeric values are allowed.");</script>';
+    }
+    elseif (strlen($contact) != 10) {
+        echo '<script>window.alert("Contact number should be exactly 10 digits.");</script>';
+    }
+    elseif ($result1->num_rows > 0) {
+    echo '<script>window.alert("Contact number is already taken");</script>';
+    } 
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo '<script>window.alert("Invalid email address format.");</script>';
+    }
+    elseif ($result2->num_rows > 0) {
+    echo '<script>window.alert("Email is already taken");</script>';
+    }
+    elseif (strlen($addr) < 5 || strlen($addr) > 50) {
+        echo '<script>window.alert("Address should be between 5 and 50 characters.");</script>';
+    }
+    elseif(!preg_match("/^[a-zA-Z ]+$/",$addr)){
+      echo '<script>window.alert("address should contain only letters and spaces.");</script>';
+    }
+    elseif (strlen($city) < 3 || strlen($city) > 25) {
+        echo '<script>window.alert("City should be between 3 and 25 characters.");</script>';
+    }
+    elseif(!preg_match("/^[a-zA-Z ]+$/",$city)){
+      echo '<script>window.alert("City should contain only letters and spaces.");</script>';
+    }
+    elseif (strlen($passwd1) < 6) {
+        echo '<script>window.alert("Password should be at least 6 characters long.");</script>';
+    } 
+    elseif ($passwd1 !== $passwd2) {
+        echo '<script>window.alert("Passwords do not match.");</script>';
+    }
+    else{
+      $insertQuery = "INSERT INTO users (name, contact, email, addr, city, password) VALUES ('$name', '$contact', '$email', '$addr', '$city', '$passwd1')";
+      if ($conn->query($insertQuery) === TRUE) {
+      echo '<script>
+        window.alert("Registration successful.");
+        window.location.href="http://localhost:8000/login.php";
+        </script>';
+      } else {
+      echo '<script>window.alert("Error: ' . $conn->error . '");</script>';
+      }
+    }
 }
 ?>
