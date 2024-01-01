@@ -58,6 +58,7 @@ $_SESSION['name']=$row['name'];
         <li><a href="career.php">Career</a></li>
         <li><a href="health.php">Health</a></li>
         <li><a href="tution.php">Tution</a></li>
+        <li><a href="loan.php">Loan</a></li>
         <li><a href="#">About</a></li>
         <li><a href="logout.php" onclick="confirmDelete(event)">Logout</a></li>
       </ul>
@@ -74,6 +75,7 @@ $_SESSION['name']=$row['name'];
         <li><a href="career.php">Career</a></li>
         <li><a href="health.php">Health</a></li>
         <li><a href="tution.php">Tution</a></li>
+        <li><a href="loan.php">Loan</a></li>
         <li><a href="#">About</a></li>
         <li><a href="logout.php" onclick="confirmDelete(event)">Logout</a></li>
       </ul><br>
