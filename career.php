@@ -10,7 +10,7 @@
   position: relative;
   max-width: 500px;
   width: 100%;
-  background: #1F2937;
+  background: #FCEDDA;
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@
   font-size: 1rem;
   color: #808080;
   margin-top: 5px;
-  border: 1px solid #4B5563;
+  border: 1px solid #DF554E;
   border-radius: 6px;
   padding: 0 15px;
   background: #FCEDDA;
@@ -111,11 +111,11 @@
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  background: #4965EE;
+  background: #EF4F34;
 }
 
 .form button:hover {
-  background: #4965EE;
+  background: #EF4F34;
 }
     </style>
   </head>

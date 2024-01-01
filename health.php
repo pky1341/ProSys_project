@@ -7,33 +7,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="flex flex-col items-center justify-center h-screen dark">
-    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-200 mb-4">Health Information Form</h2>
+  <div class="container">
+  <div class="flex flex-col items-center justify-center dark">
+    <div class="w-full max-w-md bg-red-200 rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold text-slate-800 mb-4">Health Information Form</h2>
 
       <form class="flex flex-col" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
-        <input placeholder="Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" name="name" id="name" required>
-        <input placeholder="Mobile Number" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" name="phone" id="phone" required>
-        <input placeholder="Date of Birth" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="date" name="dob" id="dob" required>
-        <select placeholder="Gender" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" name="gender" id="gender" required>
+        <input placeholder="Name" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="name" id="name" required>
+        <input placeholder="Mobile Number" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="phone" id="phone" required>
+        <input placeholder="Date of Birth" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="date" name="dob" id="dob" required>
+        <select placeholder="Gender" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="gender" id="gender" required>
           <option value="" disabled selected>Select Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
-        <textarea placeholder="Address" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" name="addr" id="addr" required></textarea>
-        <input placeholder="Aadhar Card Number" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="number" name="aadhar_no" id="aadhar_no" required>
-        <input placeholder="Upload Aadhar Card" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="file" name="upload_aadhar" id="upload_aadhar" required>
-        <select placeholder="Disability" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" name="dis" id="dis" required>
+        <textarea placeholder="Address" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="addr" id="addr" required></textarea>
+        <input placeholder="Aadhar Card Number" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="number" name="aadhar_no" id="aadhar_no" required>
+        <input placeholder="Upload Aadhar Card" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="file" name="upload_aadhar" id="upload_aadhar" required>
+        <select placeholder="Disability" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="dis" id="dis" required>
           <option value="" disabled selected>Select Disability Status</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
-        <input placeholder="Occupation" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" name="occu" id="occu" required>
+        <input placeholder="Occupation" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="occu" id="occu" required>
 
-        <button class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" type="submit" name="button" value="Submit">Submit</button>
+        <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-red-500	 hover:bg-red-600	 transition ease-in-out duration-150" type="submit" name="button" value="Submit">Submit</button>
       </form>
     </div>
+  </div>
   </div>
 </body>
 </html>

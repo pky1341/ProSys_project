@@ -8,48 +8,48 @@
 </head>
 <body>
   <div class="flex flex-col items-center justify-center h-screen dark">
-    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-200 mb-4">Tuition Form</h2>
+    <div class="w-full max-w-md bg-red-200 rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold text-slate-600 mb-4">Tuition Form</h2>
 
       <form class="flex flex-wrap" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
         <input
           type="text"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Full Name"
           name="name"
         />
         <input
           type="tel"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Mobile Number"
           name="phone"
         />
         <input
           type="date"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Date of Birth"
           name="dob"
         />
         <input
           type="text"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Address"
           name="addr"
         />
         <input
           type="text"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Education"
           name="education"
         />
         <input
           type="text"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="School Name"
           name="s_name"
         />
         <select
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
         name="medium">
           <option value="" disabled selected>Select School Medium</option>
           <option value="hindi">Hindi</option>
@@ -58,13 +58,13 @@
         </select>
         <input
           type="text"
-          class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bg-red-200 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Subject like ,English,Hindi,Math"
           name="subject"
         />
         <button
           type="submit"
-          class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+          class="bg-red-400	 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-red-400 hover:bg-red-500	 transition ease-in-out duration-150"
           name="submit"
           value="submit"
         >
