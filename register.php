@@ -152,7 +152,7 @@
     </style>
   </head>
   <body>
-    <form class="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?> ">
+    <form class="form" id="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <p class="title">Register </p>
     <p class="message">Signup now and get full access to our app. </p>
         <div class="flex">
