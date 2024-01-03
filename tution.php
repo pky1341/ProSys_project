@@ -5,17 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tuition Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bgRed{
+      background-color: #FCEDDA !important;
+    }
+    .borderColor{
+      border-color: #EE4E34 !important;
+    }
+    .bgbtn{
+      background-color: #EE4E34 !important;
+    }
+  </style>
 </head>
 <body>
   <div class="flex flex-col items-center justify-center dark">
-    <div class="w-full max-w-md bg-red-100 rounded-lg shadow-md p-6">
+    <div class="w-full max-w-md bgRed rounded-lg shadow-md p-6">
       <h2 class="text-2xl font-bold text-slate-600 mb-4">Tuition Form</h2>
 
       <form class="flex flex-wrap" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
       <label for="name" class="my-2">Name</label>  
       <input
           type="text"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Full Name"
           name="name"
           id="name"
@@ -23,7 +34,7 @@
         <label for="phone" class="my-2">Mobile</label>  
         <input
           type="tel"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Mobile Number"
           name="phone"
           id="phone"
@@ -31,7 +42,7 @@
         <label for="dob" class="my-2">Mobile</label>  
         <input
           type="date"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Date of Birth"
           name="dob"
           id="dob"
@@ -39,7 +50,7 @@
         <label for="addr" class="my-2">Address</label>
         <input
           type="text"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Address"
           name="addr"
           id="addr"
@@ -47,7 +58,7 @@
         <label for="edu" class="my-2">Education</label>
         <input
           type="text"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Education"
           name="education"
           id="edu"
@@ -55,14 +66,14 @@
         <label for="s_name" class="my-2">School Name</label>
         <input
           type="text"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="School Name"
           name="s_name"
           id="s_name"
         />
         <label for="medium" class="my-2">Medium</label>
         <select
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
         name="medium" id="medium">
           <option value="" disabled selected>Select School Medium</option>
           <option value="hindi">Hindi</option>
@@ -72,14 +83,14 @@
         <label for="sub" class="my-2">Subject</label>
         <input
           type="text"
-          class="bg-red-100 text-gray-700 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+          class="bgRed text-gray-700 border borderColor rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
           placeholder="Subject like ,English,Hindi,Math"
           name="subject"
           id="sub"
         />
         <button
           type="submit"
-          class="bg-red-400	 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-red-400 hover:bg-red-500	 transition ease-in-out duration-150"
+          class="bgbtn text-white font-bold py-2 px-4 rounded-md mt-4 hover:bgbtn transition ease-in-out duration-150"
           name="submit"
           value="submit"
         >
