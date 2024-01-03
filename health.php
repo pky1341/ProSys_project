@@ -9,28 +9,37 @@
 <body>
   <div class="container">
   <div class="flex flex-col items-center justify-center dark">
-    <div class="w-full max-w-md bg-red-200 rounded-lg shadow-md p-6">
+    <div class="w-full max-w-md bg-red-100 rounded-lg shadow-md p-6">
       <h2 class="text-2xl font-bold text-slate-800 mb-4">Health Information Form</h2>
 
       <form class="flex flex-col" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
-        <input placeholder="Name" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="name" id="name" required>
-        <input placeholder="Mobile Number" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="phone" id="phone" required>
-        <input placeholder="Date of Birth" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="date" name="dob" id="dob" required>
-        <select placeholder="Gender" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="gender" id="gender" required>
+      <label class="my-2" for="name">Name</label>
+        <input placeholder="Name" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="name" id="name" required>
+        <label class="my-2" for="phone">Mobile No</label>
+        <input placeholder="Mobile Number" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="phone" id="phone" required>
+        <label class="my-2" for="dob">Date Of Birth</label>
+        <input placeholder="Date of Birth" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="date" name="dob" id="dob" required>
+        <label class="my-2" for="gender">Gender</label>
+        <select placeholder="Gender" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="gender" id="gender" required>
           <option value="" disabled selected>Select Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select>
-        <textarea placeholder="Address" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="addr" id="addr" required></textarea>
-        <input placeholder="Aadhar Card Number" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="number" name="aadhar_no" id="aadhar_no" required>
-        <input placeholder="Upload Aadhar Card" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="file" name="upload_aadhar" id="upload_aadhar" required>
-        <select placeholder="Disability" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="dis" id="dis" required>
+        <label class="my-2" for="addr">Address</label>
+        <textarea placeholder="Address" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="addr" id="addr" required></textarea>
+        <label class="my-2" for="aadhar_no">Aadhar Number</label>
+        <input placeholder="Aadhar Card Number" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="number" name="aadhar_no" id="aadhar_no" required>
+        <label class="my-2" for="upload_aadhar">Upload Aadhar</label>
+        <input placeholder="Upload Aadhar Card" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="file" name="upload_aadhar" id="upload_aadhar" required>
+        <label class="my-2" for="dis">Disability</label>
+        <select placeholder="Disability" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" name="dis" id="dis" required>
           <option value="" disabled selected>Select Disability Status</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
-        <input placeholder="Occupation" class="bg-red-200 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-300 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="occu" id="occu" required>
+        <label class="my-2" for="occu">Occupation</label>
+        <input placeholder="Occupation" class="bg-red-100 text-gray-600 border border-red-400 rounded-md p-2 mb-4 focus:bg-red-200 focus:outline-none focus:ring-1 focus:ring-red-400 transition ease-in-out duration-150" type="text" name="occu" id="occu" required>
 
         <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-red-500	 hover:bg-red-600	 transition ease-in-out duration-150" type="submit" name="button" value="Submit">Submit</button>
       </form>
