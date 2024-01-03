@@ -18,7 +18,7 @@
 <body>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
     <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-      <div class="relative px-4 py-10 bg-red-200 mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+      <div class="relative px-4 py-10 bg-red-100 mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
         <h2 class="text-2xl font-medium text-gray-600 title-font mb-2">Loan Form</h2>
         <div class="max-w-md mx-auto text-white">
           <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -26,25 +26,25 @@
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="memberId">MemberShip
                 Id</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="number" id="memberId" name="memberId" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="name">Name</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="text" id="name" name="name" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="phone">Mobile No</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="tel" id="phone" name="phone" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="addr">Address</label>
               <textarea rows="1" cols="50"
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="text" id="addr" name="addr" required /></textarea>
             </div>
           </div>
@@ -52,26 +52,26 @@
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="dist">District</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="text" id="dist" name="dist" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="tehsil">Tehsil</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500
                 type="text" id="tehsil" name="tehsil" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="village">Village</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="text" id="village" name="village" required />
             </div>
             <div>
               <label class="font-semibold text-sm text-gray-400 pb-1 block" for="amount">Apply Loan
                 Amount</label>
               <input
-                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-200 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                class="border border-red-400 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-red-100 text-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 placeholder="(in lach)" type="number" id="amount" name="amount" required />
             </div>
             <div>
@@ -97,7 +97,7 @@
           </div>
           <div class="mt-5">
             <button
-              class="py-2 px-4 bg-red-500 hover:bg-red-400 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              class="py-2 px-4 bg-red-400 hover:bg-red-400 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               type="submit">
               Submit
             </button>
